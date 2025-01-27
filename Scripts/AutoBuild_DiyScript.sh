@@ -100,7 +100,7 @@ EOF
 		# git reset --hard 1627fd2c745e496134834a8fb8145ba0aa458ae9
 		
 		rm -r ${FEEDS_LUCI}/luci-theme-argon*
-		AddPackage other vernesong OpenClash dev
+		AddPackage other vernesong OpenClash master
 		AddPackage other jerrykuku luci-app-argon-config master
 		AddPackage other sbwml luci-app-mosdns v5-lua
 		AddPackage themes jerrykuku luci-theme-argon 18.06
@@ -123,7 +123,7 @@ EOF
 
 		case "${CONFIG_FILE}" in
 		d-team_newifi-d2-Clash | xiaoyu_xy-c5-Clash)
-			ClashDL mipsle-hardfloat tun
+			ClashDL mipsle-hardfloat meta
 		;;
 		esac
 			
