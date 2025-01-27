@@ -99,7 +99,7 @@ Firmware_Diy() {
 		#sed -i "s?openwrt-23.05?master?g" ${FEEDS_CONF}
 		# git reset --hard 1627fd2c745e496134834a8fb8145ba0aa458ae9
 		
-		rm -r ${FEEDS_LUCI}/luci-theme-argon*
+		rm -rf ${FEEDS_LUCI}/luci-theme-argon*
 		AddPackage other vernesong OpenClash dev
 		AddPackage other jerrykuku luci-app-argon-config master
 		AddPackage other sbwml luci-app-mosdns v5-lua
@@ -108,10 +108,10 @@ Firmware_Diy() {
 		AddPackage msd_lite ximiTech luci-app-msd_lite main
 		AddPackage msd_lite ximiTech msd_lite main
 		AddPackage iptvhelper riverscn openwrt-iptvhelper master
-		rm -r ${FEEDS_PKG}/mosdns
-		rm -r ${FEEDS_LUCI}/luci-app-mosdns
-		rm -r ${FEEDS_PKG}/curl
-		rm -r ${FEEDS_PKG}/msd_lite
+		rm -rf ${FEEDS_PKG}/mosdns
+		rm -rf ${FEEDS_LUCI}/luci-app-mosdns
+		rm -rf ${FEEDS_PKG}/curl
+		rm -rf ${FEEDS_PKG}/msd_lite
 		Copy ${CustomFiles}/curl ${FEEDS_PKG}
 		
 		case "${TARGET_BOARD}" in
